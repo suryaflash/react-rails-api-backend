@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+
+
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+
   get 'article/index' ,to:'article#index'
 
   post 'article/new' ,to: 'article#new' 
@@ -16,7 +21,15 @@ Rails.application.routes.draw do
 
   post 'article/update' , to:'article#update'
 
-  get 'article/update' , to:'article#update'
+  get 'article/update' , to:'article#update'  
+
+   post 'user/sign_in' , to:'userdatum_token#create'
+
+  get 'user/sign_in' , to:'article#signin'  
+
+   post 'user/sign_up' , to:'article#signup'
+
+  get 'user/sign_up' , to:'article#signup' 
 
 end
 
