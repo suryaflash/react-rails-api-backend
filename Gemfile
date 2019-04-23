@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rack-cors', require: 'rack/cors'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3','~> 1.3.6'
 # Use SCSS for stylesheets
@@ -13,6 +13,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
+gem 'rack-cors'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -23,7 +25,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+gem 'audited' , '~> 4.7'
+
 gem 'knock'
+
+gem 'paper_trail'
 
 gem 'pry'
 # bundle exec rake doc:rails generates the API under doc/api.

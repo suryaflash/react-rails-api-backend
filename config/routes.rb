@@ -1,35 +1,76 @@
 Rails.application.routes.draw do
 
-
+  resources :articles
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
 
-  get 'article/index' ,to:'article#index'
 
-  post 'article/new' ,to: 'article#new' 
+  
 
-  get 'article/new' ,to:'article#new'
+  post 'user/sign_in' , to:'userdatum_token#create'
 
-  post 'article/delete' , to:'article#delete'
+  get 'user/sign_in' , to:'articles#signin'  
 
-  get 'article/delete' , to:'article#delete'
+  post 'user/sign_up' , to:'articles#signup'
 
-  post 'article/find' , to:'article#find'
+  get 'user/sign_up' , to:'articles#signup' 
 
-  get 'article/find' , to:'article#find'
+  post 'articles/update' , to:'articles#update'
 
-  post 'article/update' , to:'article#update'
+  get 'articles/update' , to:'articles#update'  
 
-  get 'article/update' , to:'article#update'  
+  post 'articles/edit' , to:'articles#edit'
 
-   post 'user/sign_in' , to:'userdatum_token#create'
+  get 'articles/edit' , to:'articles#edit'
 
-  get 'user/sign_in' , to:'article#signin'  
+  post 'articles/findEdit' , to:'articles#findEdit'
 
-   post 'user/sign_up' , to:'article#signup'
+  get 'articles/findEdit' , to:'articles#findEdit'
+      
+  post 'articles/history' , to:'articles#history'
 
-  get 'user/sign_up' , to:'article#signup' 
+  post 'articles/latest' , to:'articles#latest'
+
+  get 'articles/latest' , to:'articles#latest'
 
 end
 
+
+# article_index GET    /article(.:format)          article#index
+#               POST   /article(.:format)          article#create
+#   new_article GET    /article/new(.:format)      article#new
+#  edit_article GET    /article/:id/edit(.:format) article#edit
+#       article GET    /article/:id(.:format)      article#show
+#               PATCH  /article/:id(.:format)      article#update
+#               PUT    /article/:id(.:format)      article#update
+#               DELETE /article/:id(.:format)      article#destroy
+
+
+
+
+  # articles GET    /articles(.:format)          articles#index
+  #                POST   /articles(.:format)          articles#create
+  #    new_article GET    /articles/new(.:format)      articles#new
+  #   edit_article GET    /articles/:id/edit(.:format) articles#edit
+  #        article GET    /articles/:id(.:format)      articles#show
+  #                PATCH  /articles/:id(.:format)      articles#update
+  #                PUT    /articles/:id(.:format)      articles#update
+  #                DELETE /articles/:id(.:format)      articles#destroy
+
+
+
+
+ # get 'article/index' ,to:'article#index'
+
+  # post 'article/new' ,to: 'article#new' 
+
+  # get 'article/new' ,to:'article#new'
+
+  # post 'article/delete' , to:'article#delete'
+
+  # get 'article/delete' , to:'article#delete'
+
+  # post 'article/find' , to:'article#find'
+
+  # get 'article/find' , to:'article#find'

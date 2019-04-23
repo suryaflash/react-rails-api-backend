@@ -1,0 +1,2 @@
+class AddEditStatusToContent < ApplicationRecord
+end
